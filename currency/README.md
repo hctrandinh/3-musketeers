@@ -89,6 +89,123 @@ function help () {
 }
 ```
 
+## Testing
+In order to test your currency functions, you need to enter the following line:
+```bash
+$ npm test
+```
+
+If everything goes well you should get the following output:
+```bash
+> currency@ test /Users/huan/Documents/3-musketeers/currency
+> jest
+
+ PASS  ./index.test.js
+  currency
+    ✓ should convert 1 USD to EUR (32ms)
+    ✓ should convert 1 USD to USD (6ms)
+    ✓ should convert 1 EUR to USD (7ms)
+    ✓ should convert 1 BTC to USD (15ms)
+    ✓ should convert 1 BTC to EUR (7ms)
+    ✓ should convert (with default values) without arguments (9ms)
+    ✓ should convert with amount only as argument (7ms)
+    ✓ should convert with amount and (from) currency only as arguments (7ms)
+    ✓ should return errors message for unknown `from` or `to` currency value (4ms)
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=USD
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=USD
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=EUR
+
+  console.log index.js:18
+    BTC
+
+  console.log index.js:19
+    BTC
+
+  console.log index.js:21
+    USD
+
+  console.log index.js:22
+    BTC
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=USD
+
+  console.log index.js:18
+    BTC
+
+  console.log index.js:19
+    BTC
+
+  console.log index.js:21
+    EUR
+
+  console.log index.js:22
+    BTC
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=EUR
+
+  console.log index.js:18
+    USD
+
+  console.log index.js:19
+    USD
+
+  console.log index.js:21
+    USD
+
+  console.log index.js:22
+    USD
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=USD
+
+  console.log index.js:18
+    USD
+
+  console.log index.js:19
+    USD
+
+  console.log index.js:21
+    USD
+
+  console.log index.js:22
+    USD
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=USD
+
+  console.log index.js:18
+    EUR
+
+  console.log index.js:19
+    EUR
+
+  console.log index.js:21
+    EUR
+
+  console.log index.js:22
+    EUR
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=EUR
+
+  console.log index.js:26
+    https://api.exchangeratesapi.io/latest?base=AIB
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.061s, estimated 2s
+Ran all test suites.
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
